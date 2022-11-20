@@ -1,44 +1,49 @@
 import cv2
 import pyautogui
 
-escolha_opcao = pyautogui
-open = escolha_opcao.confirm('clique no botão desejado', buttons=['temp','%temp%','Prefetch'])
-#LIMPANDO A PASTA TEMP
-# abrirarq.hotkey('win','r')
-# abrirarq.sleep(2)
-# abrirarq.typewrite('temp')
-# abrirarq.hotkey('enter')
-# abrirarq.sleep(3)
-# abrirarq.hotkey('ctrl','a')
-# abrirarq.sleep(2)
-# abrirarq.hotkey('shift','delete')
-# posicaoTela = pyautogui.locateOnScreen('imagens/checkbox.png', confidence=0.9)
-# abrirarq.click(posicaoTela)
-# abrirarq.sleep(5)
-# abrirarq.hotkey('enter') 
+bbpy = pyautogui
+opcoes = bbpy.confirm('clique no botão desejado', buttons=['temp','%temp%','Prefetch'])
 
-# #LIMPANDO A PASTA %TEMP%
-# abrirarq.hotkey('win','r')
-# abrirarq.sleep(2)
-# abrirarq.typewrite('%temp%')
-# abrirarq.hotkey('enter')
-# abrirarq.sleep(3)
-# abrirarq.hotkey('ctrl','a')
-# abrirarq.sleep(2)
-# abrirarq.hotkey('shift','delete')
-# posicaoTela = pyautogui.locateOnScreen('imagens/ignorar.png', confidence=0.8)
-# abrirarq.sleep(4)
-# abrirarq.click(posicaoTela)
-# abrirarq.sleep(5)
+if opcoes == 'temp':
+    # LIMPANDO A PASTA TEMP
+    bbpy.hotkey('win','r')
+    bbpy.sleep(2)
+    bbpy.typewrite('temp')
+    bbpy.hotkey('enter')
+    bbpy.sleep(3)
+    bbpy.hotkey('ctrl','a')
+    bbpy.sleep(2)
+    bbpy.hotkey('shift','delete')
+    posicaoTela = pyautogui.locateOnScreen('imagens/checkbox.png', confidence=0.9)
+    bbpy.click(posicaoTela)
+    bbpy.sleep(5)
+    bbpy.hotkey('enter')
 
-# #LIMPANDO A PASTA prefetech
-# abrirarq.hotkey('win','r')
-# abrirarq.sleep(2)
-# abrirarq.typewrite('prefetch')
-# abrirarq.hotkey('enter')
-# abrirarq.sleep(3)
-# abrirarq.hotkey('ctrl','a')
-# abrirarq.sleep(2)
-# abrirarq.hotkey('shift','delete')
-# abrirarq.sleep(5)
-# abrirarq.hotkey('enter')
+if opcoes == '%temp%':
+    #LIMPANDO A PASTA %TEMP%
+    bbpy.hotkey('win','r')
+    bbpy.sleep(2)
+    bbpy.typewrite('%temp%')
+    bbpy.hotkey('enter')
+    bbpy.sleep(3)
+    bbpy.hotkey('ctrl','a')
+    bbpy.sleep(2)
+    bbpy.hotkey('shift','delete')
+    posicaoTela = pyautogui.locateOnScreen('imagens/ignorar.png', confidence=0.8)
+    bbpy.sleep(4)
+    bbpy.click(posicaoTela)
+    bbpy.sleep(5)
+
+
+if opcoes == 'Prefetch':
+    #LIMPANDO A PASTA prefetech
+    bbpy.hotkey('win','r')
+    bbpy.sleep(2)
+    bbpy.typewrite('prefetch')
+    bbpy.hotkey('enter')
+    bbpy.sleep(3)
+    bbpy.hotkey('ctrl','a')
+    bbpy.sleep(2)
+    bbpy.hotkey('shift','delete')
+    bbpy.sleep(5)
+    bbpy.hotkey('enter')
