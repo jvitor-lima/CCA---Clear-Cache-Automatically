@@ -14,7 +14,7 @@ def delete_files_in_directory(directory):
             print(f'Erro ao deletar o arquivo {file_path}: {e}')
 
 def clean_cache():
-    confirm = messagebox.askquestion("Confirmação", "Tem certeza de que deseja limpar a memória cache?")
+    confirm = messagebox.askquestion("Confirmação", "Tem certeza de que deseja limpar os arquivos temporarios?")
     if confirm != 'yes':
         messagebox.showinfo("Cancelado", "Operação cancelada.")
         return
@@ -29,7 +29,7 @@ def clean_cache():
     if success:
         prefetch_directory = 'C:\\Windows\\prefetch'
         delete_files_in_directory(prefetch_directory)
-        messagebox.showinfo("Sucesso", "A pasta Prefetch foi limpa com sucesso!")
+        messagebox.showinfo("Sucesso", "Os arquivos cache foram limpos!")
 
 
 window = tk.Tk()
